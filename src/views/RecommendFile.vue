@@ -35,6 +35,7 @@
     export default {
         data() {
             return {
+                testFeature: '',
                 videoInfos: [
                     {
                         url: defaultVideoImg,
