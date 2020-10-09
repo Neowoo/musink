@@ -27,54 +27,55 @@
                         mugshot: circleUrl,
                         video_title: '標題一',
                         uploader: '上傳者一',
-                        video_url: ''
+                        video_url: '1'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題二',
                         uploader: '上傳者二',
-                        video_url: ''
+                        video_url: '2'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題三',
                         uploader: '上傳者三',
-                        video_url: ''
+                        video_url: '3'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題四',
                         uploader: '上傳者四',
-                        video_url: ''
+                        video_url: '4'
                     }, {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題一',
                         uploader: '上傳者一',
-                        video_url: ''
+                        video_url: '5'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題二',
                         uploader: '上傳者二',
-                        video_url: ''
+                        video_url: '6'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題三',
                         uploader: '上傳者三',
+                        video_url: '7'
                     },
                     {
                         url: defaultVideoImg,
                         mugshot: circleUrl,
                         video_title: '標題四',
                         uploader: '上傳者四',
-                        video_url: ''
+                        video_url: '8'
                     },
                 ],
                 channelMessageInfo: [

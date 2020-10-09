@@ -3,7 +3,9 @@
         <el-col :lg="6" :sm="12" class="block" v-for="(info, index) in videoInfos" :key="index">
             <div class="suggestion-image">
                 <div class="block">
-                    <el-image :src="info.url" fit="contain" alt=""></el-image>
+                    <router-link :to="{name: 'videoPlayPage', query: {video: info.video_url}}">
+                        <el-image :src="info.url" fit="contain" alt=""></el-image>
+                    </router-link>
                 </div>
                 <div style="display: flex">
                     <div>

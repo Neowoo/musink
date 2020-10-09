@@ -1,6 +1,6 @@
 <template>
     <el-main>
-
+        <h1>Hi</h1>
     </el-main>
 </template>
 <script>

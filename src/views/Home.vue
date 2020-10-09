@@ -63,7 +63,7 @@
 
                 </el-menu>
             </el-aside>
-            <el-row style="background-color: #ffffff;">
+            <el-row style="background-color: #ffffff;width: 100%;">
                 <router-view></router-view>
             </el-row>
         </el-container>
