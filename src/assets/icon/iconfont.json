@@ -1,0 +1,30 @@
+{
+  "id": "1656566",
+  "name": "elementUsefulIcon",
+  "font_family": "iconfont",
+  "css_prefix_text": "el-icon-ext-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5122181",
+      "name": "订阅",
+      "font_class": "subscribe",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "9927999",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "903796",
+      "name": "火",
+      "font_class": "fire",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    }
+  ]
+}

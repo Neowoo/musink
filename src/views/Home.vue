@@ -24,51 +24,48 @@
                 </el-input>
             </el-col>
             <el-col class="main-page-header-col " :offset="7" :span="2">
-                <el-row style="width: 100%" type="flex" justify="space-between">
+                <el-row style="width: 100%" type="flex" justify="space-between" align="middle">
                     <el-icon class="el-icon-upload" style="font-size: 1.5rem;"></el-icon>
                     <el-icon class="el-icon-message-solid" style="font-size: 1.5rem;"></el-icon>
-                    <el-icon class="el-icon-user-solid" style="font-size: 1.5rem;"></el-icon>
+<!--                    <el-icon class="el-icon-user-solid" style="font-size: 1.5rem;"></el-icon>-->
+                    <el-avatar :size="36" icon="el-icon-user-solid"></el-avatar>
                 </el-row>
             </el-col>
         </el-header>
         <el-container class="container-under-header" style="background-color: rgb(230, 230, 230);">
-            <el-aside class="sidebar-menu" :class="{'aside-bar-collapse': sideMenuCollapse}">
+            <el-aside class="sidebar-menu" style="width: 240px" :class="{'aside-bar-collapse': sideMenuCollapse}">
                 <el-menu :collapse="sideMenuCollapse" :collapse-transition="false">
-                    <el-submenu index="1">
-                        <template slot="title">
-                            <i class="el-icon-location"></i>
-                            <span slot="title">导航一</span>
-                        </template>
-                        <el-menu-item-group>
-                            <span slot="title">分组一</span>
-                            <el-menu-item index="1-1">选项1</el-menu-item>
-                            <el-menu-item index="1-2">选项2</el-menu-item>
-                        </el-menu-item-group>
-                        <el-menu-item-group title="分组2">
-                            <el-menu-item index="1-3">选项3</el-menu-item>
-                        </el-menu-item-group>
-                        <el-submenu index="1-4">
-                            <span slot="title">选项4</span>
-                            <el-menu-item index="1-4-1">选项1</el-menu-item>
-                        </el-submenu>
-                    </el-submenu>
+                    <el-menu-item index="1">
+                        <i class="el-icon-s-home"></i>
+                        <span slot="title">{{$t('home_page')}}</span>
+                    </el-menu-item>
                     <el-menu-item index="2">
-                        <i class="el-icon-menu"></i>
-                        <span slot="title">导航二</span>
+                        <i class="el-icon-ext-fire"></i>
+                        <span slot="title">{{$t('popular_file')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="3" disabled>
-                        <i class="el-icon-document"></i>
-                        <span slot="title">导航三</span>
+                    <el-menu-item index="2">d
+                        <i class="el-icon-ext-subscribe"></i>
+                        <span slot="title">訂閱內容</span>
                     </el-menu-item>
-                    <el-menu-item index="4">
-                        <i class="el-icon-setting"></i>
-                        <span slot="title">导航四</span>
+                    <el-divider></el-divider>
+                    <el-menu-item index="2">
+                        <i class="el-icon-files"></i>
+                        <span slot="title">媒體庫</span>
                     </el-menu-item>
+                    <el-menu-item index="2">
+                        <i class="el-icon-time"></i>
+                        <span slot="title">觀看紀錄</span>
+                    </el-menu-item>
+                    <el-menu-item index="2">
+                        <i class="el-icon-price-tag"></i>
+                        <span slot="title">{{$t('purchase_content')}}</span>
+                    </el-menu-item>
+
                 </el-menu>
             </el-aside>
-            <el-main>
+            <el-row style="background-color: #ffffff;">
                 <router-view></router-view>
-            </el-main>
+            </el-row>
         </el-container>
     </el-container>
 
@@ -87,11 +84,14 @@
         data() {
             return {
                 sideMenuCollapse: false,
+                input3: ''
             }
         },
         methods: {}
     }
 </script>
+<!--<style src="../../node_modules/element-ui/lib/theme-chalk/index.css"></style>-->
+<!--<style src="../assets/icon/iconfont.css"></style>-->
 <style lang="scss">
     @import "../sass/variable";
 
@@ -140,6 +140,14 @@
             .el-menu {
                 border: none;
                 height: 100%;
+                .el-menu-item {
+                    padding-left: 24px;
+                    text-align: left;
+                }
+                .el-menu-item [class^=el-icon-] {
+                    font-size: 24px;
+                    margin-right: 24px;
+                }
             }
         }
         .container-under-header {
