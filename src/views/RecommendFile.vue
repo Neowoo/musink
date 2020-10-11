@@ -19,6 +19,7 @@
     import FileSuggestionRow from "../components/FileSuggestionRow";
     import CreatorPostSuggestion from "../components/CreatorPostSuggestion";
     export default {
+        name: 'RecommendFilePage',
         data() {
             return {
                 videoInfos: [
