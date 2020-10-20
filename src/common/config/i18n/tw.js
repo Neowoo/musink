@@ -2,4 +2,14 @@ export const locale = {
     purchase_content: '購買內容',
     home_page: '首頁',
     popular_file: '熱門影片',
-}
+    times_watch: '觀看次數',
+    share: '分享',
+    save: '儲存',
+    subscriber: '訂閱者',
+    subscribe: '訂閱',
+    show_full_of_video_description: '顯示完整內容',
+    show_part_of_video_description: '只顯示部分內容',
+    message_number: '則留言',
+    cancel: '取消',
+    leave_message: '留言',
+};
