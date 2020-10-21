@@ -118,7 +118,7 @@
                 </el-menu>
             </el-drawer>
 
-            <el-row style="background-color: #ffffff;width: 100%;">
+            <el-row style="background-color: #ffffff;width: 100%;overflow-y: scroll">
                 <router-view></router-view>
             </el-row>
         </el-container>
@@ -152,6 +152,7 @@
     @import "../sass/variable";
 
     .home-page-container {
+        font-size: 1em/8 * 7;
         .main-page-header {
             width: 100vw;
             height: 30px;

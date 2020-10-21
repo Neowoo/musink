@@ -9,18 +9,23 @@
                     <p>{{$t('times_watch')}}: {{watchTimes}}・{{releaseDate('2020年1月6日')}}</p>
                     <div>
                         <div>
+                            <!--      按讚按鈕      -->
                             <el-button class="film-like-save-share-btn"><i
                                     class="el-icon-ext-like like-dislike-share-save-icon"></i>{{likeQuantity}}
                             </el-button>
+                            <!--      不喜歡按鈕      -->
                             <el-button class="film-like-save-share-btn"><i
                                     class="el-icon-ext-dislike like-dislike-share-save-icon"></i>{{likeQuantity}}
                             </el-button>
+                            <!--      分享按鈕      -->
                             <el-button class="film-like-save-share-btn"><i
                                     class="el-icon-share like-dislike-share-save-icon"></i>{{$t('share')}}
                             </el-button>
+                            <!--      儲存按鈕      -->
                             <el-button class="film-like-save-share-btn"><i
                                     class="el-icon-ext-list-add like-dislike-share-save-icon"></i>{{$t('save')}}
                             </el-button>
+                            <!--      「更多」按鈕      -->
                             <el-button class="film-like-save-share-btn"><i
                                     class="el-icon-more like-dislike-share-save-icon"></i>
                             </el-button>
@@ -64,7 +69,8 @@
                         </div>
                     </el-row>
                     <el-row>
-                        
+                    <!--     其他用戶留言區     -->
+                        <comment :commentsInfo="commentsInfo"></comment>
                     </el-row>
 
                 </el-row>
@@ -78,6 +84,8 @@
 </template>
 <script>
     import VideoPlayer from "@/components/VideoPlayer.vue";
+    import Comment from "../components/Comment";
+    import avatar_image from '../assets/海豹.jpeg';
 
     export default {
         name: 'VideoPlayPage',
@@ -103,10 +111,25 @@
                 videoDescription: '民大中教、一坡最親注的友長良領把我經死政裡位大事農都力了健太多西不何阿，意優你從言示史的精得？港易行指未身可工水接說可本覺料的我路生率個從外的了接調火不元治定多知重停所期去心他去用打交合情再的演，好管個之以護而發在突告，蘭球麼一國；面圖任場和山做都因風對指來、得道別聽產有麼野臺世我不精得問兩太先除司應期的想隨一期母畫天去報紀趣意媽；有價回的務你得依特快建又將進成下後家道業但。市一小裡寫、師方著做認……便影立設的她圖說子農了：個裡力行。角一果發比經，公頭在成司由安出何畫路藥意樹說市地在初方有是出土馬色源上，德面體水上多個使節明化行重石建活子是好題！城校話一巴……原那書馬府至最了界直，不是安大我認高十、長轉有自案出能性率解時定孩表象愛分自管道好小導。',
                 shrinkFullVideoDescription: true,
                 messageNumber: 17,
+                commentsInfo: [
+                    {
+                        avatar_image: avatar_image,
+                        name: 'Neo Wu',
+                        leave_message_time: '2小時前',
+                        message: '小眾演器決和家愛們水終技回家把個讀，故書早吸半別著；停雲極馬老動教意種喜認到不白美！成子一此。不他政經勢車花告王新禮愛們傳我去。器仍不，故定老香不不夫式各等許機種加一……和我比開，投性交？片苦里生？以最嚴寫很及制先術要近此我學，長也告金國生知看在理明有影內，的令影程然的然小統們統家只都，回內用意哥驚其買動可草公呢葉未時你個論食入沒身不還你經聞質反不出買但進上總，選山光我續家是光媽眾的有。局表西想功快萬投為良未許遊型畫，觀制唱重的關度車，在林可有政我場陽依水專記天實都。有灣朋……球部術家作我麼創美寫界合大上國無生，新一可……是車有我雜德裡門們大。資種實說護空文的些家有最，結經結據童不他的黨外你下公海生你，包自地飯民大自童我，方媽公藝一東快。是詩就，的在岸我，員達風大家在死來富往來因媽的沒一護體家心商了是的唱生！上地起可時發了謝連夫們綠長這。你覺情說接聲後時道：達空社，子對處會了別超日手，叫顯最最麼候相麼場無而產單西友草注前前的朋。',
+                    },
+                    {
+                        avatar_image: avatar_image,
+                        name: 'Neo Wu2',
+                        leave_message_time: '2小時前',
+                        message: '小眾演器決和家愛們水終技回家把個讀，故書早吸半別著；停雲極馬老動教意種喜認到不白美！成子一此。不他政經勢車花告王新禮愛們傳我去。器仍不，故定老香不不夫式各等許機種加一……和我比開，投性交？片苦里生？以最嚴寫很及制先術要近此我學，長也告金國生知看在理明有影內，的令影程然的然小統們統家只都，回內用意哥驚其買動可草公呢葉未時你個論食入沒身不還你經聞質反不出買但進上總，選山光我續家是光媽眾的有。局表西想功快萬投為良未許遊型畫，觀制唱重的關度車，在林可有政我場陽依水專記天實都。有灣朋……球部術家作我麼創美寫界合大上國無生，新一可……是車有我雜德裡門們大。資種實說護空文的些家有最，結經結據童不他的黨外你下公海生你，包自地飯民大自童我，方媽公藝一東快。是詩就，的在岸我，員達風大家在死來富往來因媽的沒一護體家心商了是的唱生！上地起可時發了謝連夫們綠長這。你覺情說接聲後時道：達空社，子對處會了別超日手，叫顯最最麼候相麼場無而產單西友草注前前的朋。',
+                    },
+                ]
             }
         },
         components: {
-            VideoPlayer
+            VideoPlayer,
+            Comment
         },
         computed: {},
         created() {

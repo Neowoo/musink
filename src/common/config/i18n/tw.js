@@ -12,4 +12,5 @@ export const locale = {
     message_number: '則留言',
     cancel: '取消',
     leave_message: '留言',
+    reply: '回覆',
 };
