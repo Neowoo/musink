@@ -18,7 +18,9 @@
                     </el-button>
                 </div>
 
-                <img class="main-page-header-logo" src="../assets/musink-logo.png" alt="logo">
+                <router-link :to="{path: '/'}">
+                    <img class="main-page-header-logo" src="../assets/musink-logo.png" alt="logo">
+                </router-link>
             </el-col>
             <el-col class="main-page-header-col" :span="6">
                 <el-input placeholder="请输入内容" v-model="input3" class="input-with-select">
@@ -30,7 +32,9 @@
                     <el-icon class="el-icon-upload" style="font-size: 1.5rem;"></el-icon>
                     <el-icon class="el-icon-message-solid" style="font-size: 1.5rem;"></el-icon>
                     <!--                    <el-icon class="el-icon-user-solid" style="font-size: 1.5rem;"></el-icon>-->
-                    <el-avatar :size="36" icon="el-icon-user-solid"></el-avatar>
+                    <div>
+                        <el-avatar :size="36" icon="el-icon-user-solid"></el-avatar>
+                    </div>
                 </el-row>
             </el-col>
         </el-header>

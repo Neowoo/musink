@@ -1,5 +1,5 @@
 <template>
-    <el-main>
+    <el-main class="">
         <el-row>
             <!--     影片播放器、評論區       -->
             <el-col :span="17">
@@ -76,8 +76,8 @@
                 </el-row>
             </el-col>
             <!--          -->
-            <el-col :span="7">
-
+            <el-col :span="7" style="padding: 0 5px">
+                <sideFilmList></sideFilmList>
             </el-col>
         </el-row>
     </el-main>
@@ -85,7 +85,8 @@
 <script>
     import VideoPlayer from "@/components/VideoPlayer.vue";
     import Comment from "../components/Comment";
-    import avatar_image from '../assets/海豹.jpeg';
+    import avatarImage from '../assets/海豹.jpeg';
+    import sideFilmList from '../components/SideFilmList';
 
     export default {
         name: 'VideoPlayPage',
@@ -113,13 +114,13 @@
                 messageNumber: 17,
                 commentsInfo: [
                     {
-                        avatar_image: avatar_image,
+                        avatar_image: avatarImage,
                         name: 'Neo Wu',
                         leave_message_time: '2小時前',
                         message: '小眾演器決和家愛們水終技回家把個讀，故書早吸半別著；停雲極馬老動教意種喜認到不白美！成子一此。不他政經勢車花告王新禮愛們傳我去。器仍不，故定老香不不夫式各等許機種加一……和我比開，投性交？片苦里生？以最嚴寫很及制先術要近此我學，長也告金國生知看在理明有影內，的令影程然的然小統們統家只都，回內用意哥驚其買動可草公呢葉未時你個論食入沒身不還你經聞質反不出買但進上總，選山光我續家是光媽眾的有。局表西想功快萬投為良未許遊型畫，觀制唱重的關度車，在林可有政我場陽依水專記天實都。有灣朋……球部術家作我麼創美寫界合大上國無生，新一可……是車有我雜德裡門們大。資種實說護空文的些家有最，結經結據童不他的黨外你下公海生你，包自地飯民大自童我，方媽公藝一東快。是詩就，的在岸我，員達風大家在死來富往來因媽的沒一護體家心商了是的唱生！上地起可時發了謝連夫們綠長這。你覺情說接聲後時道：達空社，子對處會了別超日手，叫顯最最麼候相麼場無而產單西友草注前前的朋。',
                     },
                     {
-                        avatar_image: avatar_image,
+                        avatar_image: avatarImage,
                         name: 'Neo Wu2',
                         leave_message_time: '2小時前',
                         message: '小眾演器決和家愛們水終技回家把個讀，故書早吸半別著；停雲極馬老動教意種喜認到不白美！成子一此。不他政經勢車花告王新禮愛們傳我去。器仍不，故定老香不不夫式各等許機種加一……和我比開，投性交？片苦里生？以最嚴寫很及制先術要近此我學，長也告金國生知看在理明有影內，的令影程然的然小統們統家只都，回內用意哥驚其買動可草公呢葉未時你個論食入沒身不還你經聞質反不出買但進上總，選山光我續家是光媽眾的有。局表西想功快萬投為良未許遊型畫，觀制唱重的關度車，在林可有政我場陽依水專記天實都。有灣朋……球部術家作我麼創美寫界合大上國無生，新一可……是車有我雜德裡門們大。資種實說護空文的些家有最，結經結據童不他的黨外你下公海生你，包自地飯民大自童我，方媽公藝一東快。是詩就，的在岸我，員達風大家在死來富往來因媽的沒一護體家心商了是的唱生！上地起可時發了謝連夫們綠長這。你覺情說接聲後時道：達空社，子對處會了別超日手，叫顯最最麼候相麼場無而產單西友草注前前的朋。',
@@ -129,7 +130,8 @@
         },
         components: {
             VideoPlayer,
-            Comment
+            Comment,
+            sideFilmList
         },
         computed: {},
         created() {
