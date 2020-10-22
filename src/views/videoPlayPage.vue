@@ -1,5 +1,5 @@
 <template>
-    <el-main class="">
+    <el-main style="background-color: #F9F9F9">
         <el-row>
             <!--     影片播放器、評論區       -->
             <el-col :span="17">
@@ -75,8 +75,8 @@
 
                 </el-row>
             </el-col>
-            <!--          -->
-            <el-col :span="7" style="padding: 0 5px">
+            <!--     推薦影片區     -->
+            <el-col :span="7" style="padding-left: 30px">
                 <sideFilmList></sideFilmList>
             </el-col>
         </el-row>
@@ -86,7 +86,7 @@
     import VideoPlayer from "@/components/VideoPlayer.vue";
     import Comment from "../components/Comment";
     import avatarImage from '../assets/海豹.jpeg';
-    import sideFilmList from '../components/SideFilmList';
+    import sideFilmList from './SideVideoList';
 
     export default {
         name: 'VideoPlayPage',
