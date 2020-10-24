@@ -51,20 +51,20 @@
                         <i class="el-icon-ext-fire"></i>
                         <span slot="title">{{$t('popular_file')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <el-menu-item index="3">
                         <i class="el-icon-ext-subscribe"></i>
                         <span slot="title">訂閱內容</span>
                     </el-menu-item>
                     <el-divider></el-divider>
-                    <el-menu-item index="2">
+                    <el-menu-item index="4">
                         <i class="el-icon-files"></i>
                         <span slot="title">媒體庫</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <el-menu-item index="5">
                         <i class="el-icon-time"></i>
                         <span slot="title">觀看紀錄</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <el-menu-item index="6">
                         <i class="el-icon-price-tag"></i>
                         <span slot="title">{{$t('purchase_content')}}</span>
                     </el-menu-item>
