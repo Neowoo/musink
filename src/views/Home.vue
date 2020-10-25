@@ -40,31 +40,37 @@
         </el-header>
         <el-container class="container-under-header" style="background-color: rgb(230, 230, 230);">
             <!--     此區為首頁menu顯示       -->
-            <el-aside v-show="$route.name === 'recommendFile'" class="sidebar-menu" style="width: 240px"
+            <el-aside v-show="asideMenuShow($route.name)" class="sidebar-menu" style="width: 240px"
                       :class="{'aside-bar-collapse': sideMenuCollapse}">
-                <el-menu :collapse="sideMenuCollapse" :collapse-transition="false">
-                    <el-menu-item index="1">
+                <el-menu :collapse="sideMenuCollapse" :collapse-transition="false" :router="true">
+                    <!--         首頁           -->
+                    <el-menu-item index="/">
                         <i class="el-icon-s-home"></i>
                         <span slot="title">{{$t('home_page')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <!--         熱門影片          -->
+                    <el-menu-item index="hot_video">
                         <i class="el-icon-ext-fire"></i>
                         <span slot="title">{{$t('popular_file')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="3">
+                    <!--         訂閱內容          -->
+                    <el-menu-item>
                         <i class="el-icon-ext-subscribe"></i>
-                        <span slot="title">訂閱內容</span>
+                        <span slot="title">{{$t('subscribe_content')}}</span>
                     </el-menu-item>
                     <el-divider></el-divider>
-                    <el-menu-item index="4">
+                    <!--         媒體庫          -->
+                    <el-menu-item>
                         <i class="el-icon-files"></i>
-                        <span slot="title">媒體庫</span>
+                        <span slot="title">{{$t('media_warehouse')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="5">
+                    <!--         觀看紀錄          -->
+                    <el-menu-item>
                         <i class="el-icon-time"></i>
-                        <span slot="title">觀看紀錄</span>
+                        <span slot="title">{{$t('watch_record')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="6">
+                    <!--         購買內容          -->
+                    <el-menu-item>
                         <i class="el-icon-price-tag"></i>
                         <span slot="title">{{$t('purchase_content')}}</span>
                     </el-menu-item>
@@ -93,28 +99,35 @@
 
                 </div>
                 <el-menu class="drawer-menu">
-                    <el-menu-item index="1">
+                    <!--         首頁           -->
+                    <!--                    <el-menu-item :index="{path: '/'}">-->
+                    <el-menu-item>
                         <i class="el-icon-s-home"></i>
                         <span slot="title">{{$t('home_page')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <!--         熱門影片          -->
+                    <el-menu-item>
                         <i class="el-icon-ext-fire"></i>
                         <span slot="title">{{$t('popular_file')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <!--         訂閱內容          -->
+                    <el-menu-item>
                         <i class="el-icon-ext-subscribe"></i>
-                        <span slot="title">訂閱內容</span>
+                        <span slot="title">{{$t('subscribe_content')}}</span>
                     </el-menu-item>
                     <el-divider></el-divider>
-                    <el-menu-item index="2">
+                    <!--         媒體庫          -->
+                    <el-menu-item>
                         <i class="el-icon-files"></i>
-                        <span slot="title">媒體庫</span>
+                        <span slot="title">{{$t('media_warehouse')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <!--         觀看紀錄          -->
+                    <el-menu-item>
                         <i class="el-icon-time"></i>
-                        <span slot="title">觀看紀錄</span>
+                        <span slot="title">{{$t('watch_record')}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <!--         購買內容          -->
+                    <el-menu-item>
                         <i class="el-icon-price-tag"></i>
                         <span slot="title">{{$t('purchase_content')}}</span>
                     </el-menu-item>
@@ -146,7 +159,22 @@
                 input3: ''
             }
         },
-        methods: {}
+        methods: {
+            asideMenuShow(route_name) {
+                let show = false;
+                switch (route_name) {
+                    case 'recommendVideo':
+                        show = true;
+                        break;
+                    case 'hotVideo':
+                        show = true;
+                        break;
+                    default:
+                        break;
+                }
+                return show;
+            }
+        }
     }
 </script>
 <!--<style src="../../node_modules/element-ui/lib/theme-chalk/index.css"></style>-->

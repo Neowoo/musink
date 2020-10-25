@@ -1,5 +1,5 @@
 <template>
-    <el-main style="background-color: #F9F9F9">
+    <el-main class="page-el-main-setting">
         <el-row>
             <!--     影片播放器、評論區       -->
             <el-col :span="17">

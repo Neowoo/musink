@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import RecommendFile from "../views/RecommendVideo";
+import RecommendVideo from "../views/RecommendVideo";
 import VideoPlayPage from "../views/videoPlayPage";
+import HotVideo from "../views/HotVideo";
 
 Vue.use(VueRouter);
 
@@ -14,8 +15,8 @@ Vue.use(VueRouter);
     children: [
       {
         path: '',
-        name: 'recommendFile',
-        component: RecommendFile
+        name: 'recommendVideo',
+        component: RecommendVideo
       },
       {
         path: 'watch',
@@ -25,6 +26,11 @@ Vue.use(VueRouter);
           video: ''
         }
       },
+      {
+        path: 'hot_video',
+        name: 'hotVideo',
+        component: HotVideo
+      }
     ]
   },
   // {

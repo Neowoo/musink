@@ -13,4 +13,11 @@ export const locale = {
     cancel: '取消',
     leave_message: '留言',
     reply: '回覆',
+    subscribe_content: '訂閱內容',
+    media_warehouse: '媒體庫',
+    watch_record: '觀看紀錄',
+    music: '音樂',
+    game: '遊戲',
+    news: '新聞',
+    movie: '電影',
 };
