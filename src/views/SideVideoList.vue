@@ -44,12 +44,14 @@
                     {
                         sampleImage: sampleImage,
                         watch_number: '1,300',
-                        year_ago: '2年前'
+                        year_ago: '2年前',
+                        video_url: 'http://vjs.zencdn.net/v/oceans.mp4'
                     },
                     {
                         sampleImage: sampleImage,
                         watch_number: '1,800',
-                        year_ago: '6年前'
+                        year_ago: '6年前',
+                        video_url: 'http://vjs.zencdn.net/v/oceans.mp4'
                     }
                 ]
             }

@@ -4,7 +4,9 @@
             <el-col span="23">
                 <el-row type="flex">
                     <el-row style="width: 40%;min-width: 180px; margin-right: 8px">
-                        <el-image :src="info.sampleImage"></el-image>
+                        <router-link :to="{name: 'videoPlayPage', query: {video: info.video_url}}">
+                            <el-image :src="info.sampleImage"></el-image>
+                        </router-link>
                     </el-row>
                     <el-row>
                         <h3>影片名稱</h3>
@@ -49,7 +51,4 @@
 </script>
 <style lang="scss">
     @import "../sass/variable";
-    .sub-info-area {
-        color: $sub-info-color;
-    }
 </style>
