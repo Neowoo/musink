@@ -22,7 +22,7 @@
                     </div>
                 </el-row>
                 <el-divider></el-divider>
-                <HotVideoCard></HotVideoCard>
+                <HotVideoCard :cardInfo="cardInfo"></HotVideoCard>
             </el-col>
         </el-row>
 
@@ -30,10 +30,28 @@
 </template>
 <script>
     import HotVideoCard from "../components/HotVideoCard";
+    import videoImage from '@/assets/sample-recommend-image.png'
     export default {
         data() {
             return {
-
+                cardInfo: [
+                    {
+                        image: videoImage,
+                        video_name: '影片名',
+                        channel_name: '木曜四超玩',
+                        watch_times: '60萬次',
+                        last_upload_ago: '2天前',
+                        video_description: '是不由回確消了形供海死四水強慢天文利我科在心增頭多性報臺資這真政沒你小的構積國走我它便前在們我身；同國了本一充車男不評兩就黨個。',
+                    },
+                    {
+                        image: videoImage,
+                        video_name: '影片名',
+                        channel_name: '木曜四超玩',
+                        watch_times: '60萬次',
+                        last_upload_ago: '2天前',
+                        video_description: '是不由回確消了形供海死四水強慢天文利我科在心增頭多性報臺資這真政沒你小的構積國走我它便前在們我身；同國了本一充車男不評兩就黨個。',
+                    },
+                ]
             }
         },
         created() {

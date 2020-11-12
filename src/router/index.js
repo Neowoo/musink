@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import RecommendVideo from "../views/RecommendVideo";
 import VideoPlayPage from "../views/videoPlayPage";
 import HotVideo from "../views/HotVideo";
+import SubscribeContentPage from "../views/SubscribeContentPage";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ Vue.use(VueRouter);
         path: 'hot_video',
         name: 'hotVideo',
         component: HotVideo
+      },
+      {
+        path: 'subscribe_content',
+        name: 'subscribe_content',
+        components: SubscribeContentPage
       }
     ]
   },

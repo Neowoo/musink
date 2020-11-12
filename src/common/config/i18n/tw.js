@@ -20,4 +20,7 @@ export const locale = {
     game: '遊戲',
     news: '新聞',
     movie: '電影',
+    add_prepare_play_list: '加入待播放清單',
+    save_later_watch_list: '儲存至「稍後觀看」清單',
+
 };
