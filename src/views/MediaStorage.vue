@@ -1,22 +1,41 @@
 <template>
     <el-row>
         <el-header>
-            <h3>今天</h3>
+            <h3><i class="el-icon-ext-game" style="margin-right: 16px"></i>觀看紀錄</h3>
         </el-header>
         <el-row>
-            <el-col :lg="4" v-for="(info, index) in videoInfos" :key="index">
-                <FilmCard :videoInfos="info"></FilmCard>
+            <el-col :lg="19">
+                <el-row>
+                    <el-col :lg="4" v-for="(info, index) in videoInfos" :key="index">
+                        <FilmCard :videoInfos="info"></FilmCard>
+                    </el-col>
+                </el-row>
             </el-col>
-        </el-row>
+            <el-col :lg="5" style="padding: 0 24px">
+                <el-row style="text-align: center">
+                    <el-avatar :size="100" style="margin-top: 24px"></el-avatar>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row type="flex" justify="">
+                    <span>訂閱內容</span>
+                    <span>123</span>
+                </el-row>
+            </el-col>
 
+        </el-row>
     </el-row>
 </template>
 <script>
     import defaultVideoImg from '@/assets/sample-recommend-image.png';
     import circleUrl from '@/assets/海豹.jpeg';
     import FilmCard from "../components/FilmCard";
+
     export default {
-        data(){
+        name: 'MediaStorage',
+        components: {
+            FilmCard
+        },
+        data() {
             return {
                 videoInfos: [
                     {
@@ -77,9 +96,6 @@
                 ],
             }
         },
-        components: {
-            FilmCard
-        }
     }
 </script>
 <style lang="scss">

@@ -5,6 +5,7 @@ import RecommendVideo from "../views/RecommendVideo";
 import VideoPlayPage from "../views/videoPlayPage";
 import HotVideo from "../views/HotVideo";
 import SubscribeContentPage from "../views/SubscribeContentPage";
+import MediaStorage from "../views/MediaStorage";
 
 Vue.use(VueRouter);
 
@@ -34,8 +35,13 @@ Vue.use(VueRouter);
       },
       {
         path: 'subscribe_content',
-        name: 'subscribe_content',
-        components: SubscribeContentPage
+        name: 'subscribeContent',
+        component: SubscribeContentPage
+      },
+      {
+        path: 'media_storage',
+        name: 'mediaStorage',
+        component: MediaStorage
       }
     ]
   },

@@ -42,40 +42,7 @@
             <!--     此區為首頁menu顯示       -->
             <el-aside v-show="asideMenuShow($route.name)" class="sidebar-menu" style="width: 240px"
                       :class="{'aside-bar-collapse': sideMenuCollapse}">
-                <el-menu :collapse="sideMenuCollapse" :collapse-transition="false" :router="true">
-                    <!--         首頁           -->
-                    <el-menu-item index="/">
-                        <i class="el-icon-s-home"></i>
-                        <span slot="title">{{$t('home_page')}}</span>
-                    </el-menu-item>
-                    <!--         熱門影片          -->
-                    <el-menu-item index="hot_video">
-                        <i class="el-icon-ext-fire"></i>
-                        <span slot="title">{{$t('popular_file')}}</span>
-                    </el-menu-item>
-                    <!--         訂閱內容          -->
-                    <el-menu-item>
-                        <i class="el-icon-ext-subscribe"></i>
-                        <span slot="title">{{$t('subscribe_content')}}</span>
-                    </el-menu-item>
-                    <el-divider></el-divider>
-                    <!--         媒體庫          -->
-                    <el-menu-item>
-                        <i class="el-icon-files"></i>
-                        <span slot="title">{{$t('media_warehouse')}}</span>
-                    </el-menu-item>
-                    <!--         觀看紀錄          -->
-                    <el-menu-item>
-                        <i class="el-icon-time"></i>
-                        <span slot="title">{{$t('watch_record')}}</span>
-                    </el-menu-item>
-                    <!--         購買內容          -->
-                    <el-menu-item>
-                        <i class="el-icon-price-tag"></i>
-                        <span slot="title">{{$t('purchase_content')}}</span>
-                    </el-menu-item>
-
-                </el-menu>
+                <SidebarMenu></SidebarMenu>
             </el-aside>
             <!--      此區為影片播放頁面menu，採用drawer      -->
             <el-drawer
@@ -98,41 +65,7 @@
                     <img src="../assets/musink-logo.png" class="drawer-title-icon" alt="logo">
 
                 </div>
-                <el-menu class="drawer-menu">
-                    <!--         首頁           -->
-                    <!--                    <el-menu-item :index="{path: '/'}">-->
-                    <el-menu-item>
-                        <i class="el-icon-s-home"></i>
-                        <span slot="title">{{$t('home_page')}}</span>
-                    </el-menu-item>
-                    <!--         熱門影片          -->
-                    <el-menu-item>
-                        <i class="el-icon-ext-fire"></i>
-                        <span slot="title">{{$t('popular_file')}}</span>
-                    </el-menu-item>
-                    <!--         訂閱內容          -->
-                    <el-menu-item>
-                        <i class="el-icon-ext-subscribe"></i>
-                        <span slot="title">{{$t('subscribe_content')}}</span>
-                    </el-menu-item>
-                    <el-divider></el-divider>
-                    <!--         媒體庫          -->
-                    <el-menu-item>
-                        <i class="el-icon-files"></i>
-                        <span slot="title">{{$t('media_warehouse')}}</span>
-                    </el-menu-item>
-                    <!--         觀看紀錄          -->
-                    <el-menu-item>
-                        <i class="el-icon-time"></i>
-                        <span slot="title">{{$t('watch_record')}}</span>
-                    </el-menu-item>
-                    <!--         購買內容          -->
-                    <el-menu-item>
-                        <i class="el-icon-price-tag"></i>
-                        <span slot="title">{{$t('purchase_content')}}</span>
-                    </el-menu-item>
-
-                </el-menu>
+                <SidebarMenu></SidebarMenu>
             </el-drawer>
 
             <el-row style="background-color: #ffffff;width: 100%;overflow-y: scroll">
@@ -147,11 +80,13 @@
 <script>
     // @ is an alias to /src
     // import HelloWorld from '@/components/HelloWorld.vue'
+    import SidebarMenu from "../components/SidebarMenu";
 
     export default {
         name: 'Home',
         components: {
             // HelloWorld
+            SidebarMenu
         },
         data() {
             return {
@@ -167,6 +102,12 @@
                         show = true;
                         break;
                     case 'hotVideo':
+                        show = true;
+                        break;
+                    case 'subscribeContent':
+                        show = true;
+                        break;
+                    case 'mediaStorage':
                         show = true;
                         break;
                     default:

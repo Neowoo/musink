@@ -2,7 +2,9 @@
     <el-main>
         <!--        -->
         <el-row>
-            <FileSuggestionRow :videoInfos="videoInfos"></FileSuggestionRow>
+            <el-col :lg="6" :sm="12" class="block" v-for="(info, index) in videoInfos" :key="index">
+                <FileCard :videoInfos="info"></FileCard>
+            </el-col>
         </el-row>
         <el-row class="homepage-after-first-area channel-news">
             <h3 class="area-title">最新創作者訊息</h3>
@@ -16,7 +18,7 @@
     import circleUrl from '@/assets/海豹.jpeg';
     import messageImage from '@/assets/messageImage.png'
     //組件
-    import FileSuggestionRow from "../components/FileSuggestionRow";
+    import FileCard from "../components/FilmCard";
     import CreatorPostSuggestion from "../components/CreatorPostSuggestion";
     export default {
         name: 'RecommendFilePage',
@@ -132,7 +134,7 @@
             }
         },
         components: {
-            FileSuggestionRow,
+            FileCard,
             CreatorPostSuggestion
         },
         created() {
