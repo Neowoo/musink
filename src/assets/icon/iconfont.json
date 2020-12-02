@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "712657",
+      "name": "history",
+      "font_class": "history",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "3176867",
+      "name": "Youtube",
+      "font_class": "Youtube",
+      "unicode": "ea4c",
+      "unicode_decimal": 59980
+    },
+    {
+      "icon_id": "11983519",
+      "name": "youtube",
+      "font_class": "youtube",
+      "unicode": "ea07",
+      "unicode_decimal": 59911
+    },
+    {
+      "icon_id": "490497",
+      "name": "playlist_play",
+      "font_class": "playlistplay",
+      "unicode": "ecb0",
+      "unicode_decimal": 60592
+    },
+    {
+      "icon_id": "11398745",
+      "name": "clock",
+      "font_class": "clock",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "1420859",
       "name": "game",
       "font_class": "game",

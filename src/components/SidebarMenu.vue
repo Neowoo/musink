@@ -26,6 +26,11 @@
             <i class="el-icon-time"></i>
             <span slot="title">{{$t('watch_record')}}</span>
         </el-menu-item>
+        <!--    你的影片    -->
+        <el-menu-item index="studio">
+            <i class="el-icon-time"></i>
+            <span slot="title">{{$t('your_video')}}</span>
+        </el-menu-item>
         <!--         購買內容          -->
         <el-menu-item>
             <i class="el-icon-price-tag"></i>

@@ -26,9 +26,9 @@
                     <el-radio :label="9" class="reverse-radio-label">聊天室</el-radio>
                     <el-divider></el-divider>
                 </el-radio-group>
-                <el-button class="block-btn"></el-button>
-                <el-button class="block-btn"></el-button>
-                <el-button class="block-btn"></el-button>
+                <el-button class="block-btn no-border-btn">清除所有觀看紀錄</el-button>
+                <el-button class="block-btn no-border-btn">暫停追蹤觀看紀錄</el-button>
+                <el-button class="block-btn no-border-btn">管理所有活動紀錄</el-button>
             </el-col>
         </el-row>
     </el-row>
