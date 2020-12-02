@@ -19,6 +19,33 @@ h2 {
   margin: 16px 0;
 }
 
+.reverse-radio-label {
+  &.el-radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .el-radio__label {
+      padding-left: 16px;
+    }
+  }
+}
+
+.block-btn {
+  &.el-button {
+    &+ .el-button {
+      margin-left: 0;
+    }
+    display: block;
+  }
+}
+
+
+.w-100 {
+  .el-radio-group {
+    width: 100%;
+  }
+}
+
 .section-top-margin {
   margin-top: 16px;
 }

@@ -22,7 +22,7 @@
             <span slot="title">{{$t('media_warehouse')}}</span>
         </el-menu-item>
         <!--         觀看紀錄          -->
-        <el-menu-item>
+        <el-menu-item index="watch_record">
             <i class="el-icon-time"></i>
             <span slot="title">{{$t('watch_record')}}</span>
         </el-menu-item>

@@ -94,6 +94,9 @@
                 input3: ''
             }
         },
+        mounted() {
+            console.log(this.$route.name);
+        },
         methods: {
             asideMenuShow(route_name) {
                 let show = false;
@@ -108,6 +111,9 @@
                         show = true;
                         break;
                     case 'mediaStorage':
+                        show = true;
+                        break;
+                    case 'watchRecordPage':
                         show = true;
                         break;
                     default:

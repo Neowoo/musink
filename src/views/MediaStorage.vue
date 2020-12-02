@@ -11,14 +11,24 @@
                     </el-col>
                 </el-row>
             </el-col>
-            <el-col :lg="5" style="padding: 0 24px">
+            <el-col :lg="5" style="padding: 0 50px">
                 <el-row style="text-align: center">
                     <el-avatar :size="100" style="margin-top: 24px"></el-avatar>
                 </el-row>
                 <el-divider></el-divider>
-                <el-row type="flex" justify="">
+                <el-row type="flex" justify="space-between">
                     <span>訂閱內容</span>
                     <span>123</span>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row type="flex" justify="space-between">
+                    <span>上傳數量</span>
+                    <span>1</span>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row type="flex" justify="space-between">
+                    <span>使用者喜歡的影片數</span>
+                    <span>351</span>
                 </el-row>
             </el-col>
 

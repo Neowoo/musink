@@ -6,6 +6,7 @@ import VideoPlayPage from "../views/videoPlayPage";
 import HotVideo from "../views/HotVideo";
 import SubscribeContentPage from "../views/SubscribeContentPage";
 import MediaStorage from "../views/MediaStorage";
+import WatchRecordPage from "../views/WatchRecordPage";
 
 Vue.use(VueRouter);
 
@@ -42,7 +43,13 @@ Vue.use(VueRouter);
         path: 'media_storage',
         name: 'mediaStorage',
         component: MediaStorage
+      },
+      {
+        path: 'watch_record',
+        name: 'watchRecordPage',
+        component: WatchRecordPage
       }
+
     ]
   },
   // {
