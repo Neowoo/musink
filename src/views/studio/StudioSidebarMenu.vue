@@ -1,5 +1,5 @@
 <template>
-    <el-menu :collapse="sideMenuCollapse" :collapse-transition="false" :router="true">
+    <el-menu class="sidebar-menu-list" :collapse="sideMenuCollapse" :router="true">
         <!--         首頁           -->
         <el-menu-item index="/">
             <i class="el-icon-s-home"></i>
@@ -72,5 +72,41 @@
     }
 </script>
 <style lang="scss">
+    .sidebar-menu {
+        width: fit-content;
+        .el-menu--collapse {
+            height: 100%;
+            min-width: 64px;
+        }
 
+        .sidebar-menu_list {
+            width: 64px;
+            .sidebar-menu-list_icon {
+                color: #fff;
+                line-height: 56px;
+            }
+
+            &:not(.el-menu--collapse) {
+                width: 255px;
+                height: 100%;
+            }
+        }
+
+        .el-menu {
+            .el-menu-item {
+                min-width: 0;
+            }
+        }
+    }
+
+    .service-area {
+        position: relative;
+        width: calc(100vw - 64px);
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .service-area.width100 {
+        width: calc(100vw - 255px);
+    }
 </style>

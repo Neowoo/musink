@@ -19,7 +19,7 @@
                 </div>
 
                 <router-link :to="{path: '/'}">
-                    <img class="main-page-header-logo" src="../assets/musink-logo.png" alt="logo">
+                    <img class="main-page-header-logo" src="../assets/YouTube-Logo-700x394.png" alt="logo">
                 </router-link>
             </el-col>
             <el-col class="main-page-header-col" :span="6">
@@ -42,7 +42,7 @@
             <!--     此區為首頁menu顯示       -->
             <el-aside v-show="asideMenuShow($route.name)" class="sidebar-menu" style="width: 240px"
                       :class="{'aside-bar-collapse': sideMenuCollapse}">
-                <SidebarMenu></SidebarMenu>
+                <SidebarMenu :sideMenuCollapse="sideMenuCollapse"></SidebarMenu>
             </el-aside>
             <!--      此區為影片播放頁面menu，採用drawer      -->
             <el-drawer
