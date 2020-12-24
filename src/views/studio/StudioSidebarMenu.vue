@@ -1,41 +1,50 @@
 <template>
-    <el-menu class="sidebar-menu-list" :collapse="sideMenuCollapse" :router="true">
-        <!--         首頁           -->
+    <el-menu class="sidebar-menu-list" style="position: relative;" :collapse="sideMenuCollapse" :router="true">
+        <!--         資訊主頁           -->
         <el-menu-item index="/">
             <i class="el-icon-s-home"></i>
-            <span slot="title">{{$t('home_page')}}</span>
+            <span slot="title">{{$t('information_home_page')}}</span>
         </el-menu-item>
         <!--         熱門影片          -->
         <el-menu-item index="hot_video">
             <i class="el-icon-ext-fire"></i>
-            <span slot="title">{{$t('popular_file')}}</span>
+            <span slot="title">{{$t('popular_film')}}</span>
         </el-menu-item>
-        <!--         訂閱內容          -->
+        <!--         內容          -->
         <el-menu-item index="subscribe_content">
             <i class="el-icon-ext-subscribe"></i>
-            <span slot="title">{{$t('subscribe_content')}}</span>
+            <span slot="title">{{$t('content')}}</span>
         </el-menu-item>
-        <el-divider></el-divider>
-        <!--         媒體庫          -->
+        <!--         播放清單          -->
         <el-menu-item index="media_storage">
             <i class="el-icon-files"></i>
-            <span slot="title">{{$t('media_warehouse')}}</span>
+            <span slot="title">{{$t('play_list')}}</span>
         </el-menu-item>
-        <!--         觀看紀錄          -->
+        <!--         數據分析          -->
         <el-menu-item index="watch_record">
             <i class="el-icon-ext-history"></i>
-            <span slot="title">{{$t('watch_record')}}</span>
+            <span slot="title">{{$t('data_analysis')}}</span>
         </el-menu-item>
-        <!--    你的影片    -->
+        <!--    字幕    -->
         <el-menu-item index="studio">
             <i class="el-icon-time"></i>
-            <span slot="title">{{$t('your_video')}}</span>
+            <span slot="title">{{$t('subtitles')}}</span>
         </el-menu-item>
-        <!--         購買內容          -->
+        <!--         版權          -->
         <el-menu-item>
             <i class="el-icon-price-tag"></i>
-            <span slot="title">{{$t('purchase_content')}}</span>
+            <span slot="title">{{$t('copyright')}}</span>
         </el-menu-item>
+        <div class="side-menu-bottom-item-area">
+            <el-menu-item>
+                <i class="el-icon-price-tag"></i>
+                <span slot="title">{{$t('copyright')}}</span>
+            </el-menu-item>
+            <el-menu-item>
+                <i class="el-icon-price-tag"></i>
+                <span slot="title">{{$t('copyright')}}</span>
+            </el-menu-item>
+        </div>
 
     </el-menu>
 </template>
@@ -79,7 +88,7 @@
             min-width: 64px;
         }
 
-        .sidebar-menu_list {
+        .sidebar-menu-list {
             width: 64px;
             .sidebar-menu-list_icon {
                 color: #fff;
@@ -108,5 +117,10 @@
 
     .service-area.width100 {
         width: calc(100vw - 255px);
+    }
+
+    .side-menu-bottom-item-area {
+        position: absolute;
+        bottom: 0;
     }
 </style>

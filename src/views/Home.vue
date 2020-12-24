@@ -131,7 +131,6 @@
     @import "../sass/variable";
 
     .home-page-container {
-        font-size: 1em/8 * 7;
         .main-page-header {
             width: 100vw;
             height: 30px;

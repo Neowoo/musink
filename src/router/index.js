@@ -8,6 +8,7 @@ import SubscribeContentPage from "../views/SubscribeContentPage";
 import MediaStorage from "../views/MediaStorage";
 import WatchRecordPage from "../views/WatchRecordPage";
 import StudioHome from "../views/studio/StudioHome";
+import InformationHomePage from "../views/studio/InformationHomePage";
 
 Vue.use(VueRouter);
 
@@ -54,12 +55,16 @@ const routes = [
         ]
     },
     {
-      path: '/studio',
-      name: 'studio',
-      component: StudioHome,
-      children: [
-
-      ]
+        path: '/studio',
+        name: 'studio',
+        component: StudioHome,
+        children: [
+            {
+                path: '',
+                name: 'StudioHome',
+                component: InformationHomePage
+            }
+        ]
 
     }
     // {

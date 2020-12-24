@@ -8,7 +8,7 @@
         <!--         熱門影片          -->
         <el-menu-item index="hot_video">
             <i class="el-icon-ext-fire"></i>
-            <span slot="title">{{$t('popular_file')}}</span>
+            <span slot="title">{{$t('popular_film')}}</span>
         </el-menu-item>
         <!--         訂閱內容          -->
         <el-menu-item index="subscribe_content">
@@ -36,7 +36,6 @@
             <i class="el-icon-price-tag"></i>
             <span slot="title">{{$t('purchase_content')}}</span>
         </el-menu-item>
-
     </el-menu>
 </template>
 <script>

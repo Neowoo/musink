@@ -2,8 +2,8 @@
     <!--  <div class="home">-->
     <!--    <img alt="Vue logo" src="../assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <el-container class="home-page-container">
-        <el-header class="main-page-header">
+    <el-container class="home-page-container ">
+        <el-header class="main-page-header studio-page">
             <!--    最左    -->
             <el-col class="main-page-header-col" :span="9">
                 <!--                <el-input></el-input>-->
@@ -19,7 +19,7 @@
                 </div>
 
                 <router-link :to="{path: '/'}">
-                    <img class="main-page-header-logo" src="../../assets/YouTube-Logo-700x394.png" alt="logo">
+                    <img class="main-page-header-logo" src="../../assets/youtube-studio.png" alt="logo">
                 </router-link>
             </el-col>
             <el-col class="main-page-header-col" :span="6">
@@ -43,7 +43,7 @@
             <div class="sidebar-menu">
                 <StudioSidebarMenu :sideMenuCollapse="sideMenuCollapse"></StudioSidebarMenu>
             </div>
-            <div class="service-area" :class="{'width100': !sideMenuCollapse}" style="background-color: #ffffff;overflow-y: scroll">
+            <div class="service-area" :class="{'width100': !sideMenuCollapse}" style="background-color: #E9E9E9;overflow-y: scroll">
                 <router-view></router-view>
             </div>
         </el-container>
@@ -96,27 +96,8 @@
     @import "../../sass/variable";
 
     .home-page-container {
-        font-size: 1em/8 * 7;
 
-        .main-page-header {
-            width: 100vw;
-            height: 30px;
 
-            &.el-header {
-                padding: 0 20px 0 0;
-            }
-
-            .main-page-header-logo {
-                width: 85px;
-                height: auto;
-            }
-
-            .main-page-header-col {
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
-        }
 
         .header-drawer-trigger {
             &.el-button {

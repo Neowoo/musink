@@ -10,6 +10,9 @@ a {
   text-decoration: none;
   color: black;
 }
+h1 {
+  font-size: 2em;
+}
 
 h2 {
   font-size: 19px;
@@ -83,4 +86,47 @@ h2 {
 
 .sub-info-area {
   color: $sub-info-color;
+}
+
+.main-page-header {
+  width: 100vw;
+  height: 30px;
+  &.studio-page {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  &.el-header {
+    padding: 0 20px 0 0;
+  }
+
+  .main-page-header-logo {
+    width: 85px;
+    height: auto;
+  }
+
+  .main-page-header-col {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.gray-theme-bg-color {
+  background-color: $gray;
+}
+
+.gray-font-color {
+  color: $dark-gray;
+}
+
+.f-j-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.el-button {
+  &.padding-0 {
+    padding: 0;
+  }
 }
