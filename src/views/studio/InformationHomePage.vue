@@ -15,7 +15,7 @@
                         <ChannelDataAnalysis></ChannelDataAnalysis>
                     </el-col>
                     <el-col :lg="8" class="padding-both-side">
-
+                        <News></News>
                     </el-col>
                 </el-row>
             </el-row>
@@ -25,6 +25,7 @@
 <script>
     import LastVideoEffect from "../../components/CardInfo/LastVideoEffect";
     import ChannelDataAnalysis from "../../components/CardInfo/ChannelDataAnalysis";
+    import News from "../../components/CardInfo/News";
 
     export default {
         data() {
@@ -32,7 +33,8 @@
         },
         components: {
             LastVideoEffect,
-            ChannelDataAnalysis
+            ChannelDataAnalysis,
+            News
         }
     }
 </script>
@@ -45,6 +47,4 @@
             padding: 0 15px;
         }
     }
-
-
 </style>

@@ -44,5 +44,6 @@ export const locale = {
     to_video_data_analysis_page: '前往影片數據分析頁面',
     check_leave_message: '查看留言',
     to_channel_analysis_page: '前往頻道分析頁面',
-
+    last_news: '最新消息',
+    channel_content: '頻道內容',
 };

@@ -3,7 +3,7 @@
     <!--    <img alt="Vue logo" src="../assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <el-container class="home-page-container ">
-        <el-header class="main-page-header studio-page">
+        <el-header v-if="asideMenuShow($route.name)" class="main-page-header studio-page">
             <!--    最左    -->
             <el-col class="main-page-header-col" :span="9">
                 <!--                <el-input></el-input>-->
@@ -40,7 +40,7 @@
         </el-header>
         <el-container class="container-under-header" style="background-color: rgb(230, 230, 230);">
             <!--     此區為首頁menu顯示       -->
-            <div class="sidebar-menu">
+            <div v-if="asideMenuShow($route.name)" class="sidebar-menu">
                 <StudioSidebarMenu :sideMenuCollapse="sideMenuCollapse"></StudioSidebarMenu>
             </div>
             <div class="service-area" :class="{'width100': !sideMenuCollapse}" style="background-color: #E9E9E9;overflow-y: scroll">
@@ -74,10 +74,14 @@
         },
         methods: {
             asideMenuShow(route_name) {
+                console.log(route_name, 1)
                 console.log(route_name);
                 let show = false;
                 switch (route_name) {
-                    case 'studio':
+                    case 'StudioHome':
+                        show = true;
+                        break;
+                    case 'UpdatedVideoContent':
                         show = true;
                         break;
                     default:

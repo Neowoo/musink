@@ -9,6 +9,7 @@ import MediaStorage from "../views/MediaStorage";
 import WatchRecordPage from "../views/WatchRecordPage";
 import StudioHome from "../views/studio/StudioHome";
 import InformationHomePage from "../views/studio/InformationHomePage";
+import UpdatedVideoContent from "../views/studio/UpdatedVideoContent";
 
 Vue.use(VueRouter);
 
@@ -63,6 +64,11 @@ const routes = [
                 path: '',
                 name: 'StudioHome',
                 component: InformationHomePage
+            },
+            {
+                path: '/updated_video_content',
+                name: 'UpdatedVideoContent',
+                component: UpdatedVideoContent
             }
         ]
 

@@ -1,7 +1,7 @@
 <template>
     <el-card class="information-home-page-card">
         <div>
-            <h2 style="padding-bottom: 14px;">
+            <h2 class="card-header">
                 {{$t('last_video_effect')}}
             </h2>
             <div>
@@ -37,6 +37,7 @@
 </script>
 <style lang="scss" scoped>
     @import "../../sass/_forAll";
+    @import "../../sass/mixin";
     .card-row-padding {
         padding-top: 2px;
         padding-bottom: 10px;

@@ -1,17 +1,12 @@
 <template>
     <el-menu class="sidebar-menu-list" style="position: relative;" :collapse="sideMenuCollapse" :router="true">
         <!--         資訊主頁           -->
-        <el-menu-item index="/">
+        <el-menu-item index="/studio">
             <i class="el-icon-s-home"></i>
             <span slot="title">{{$t('information_home_page')}}</span>
         </el-menu-item>
-        <!--         熱門影片          -->
-        <el-menu-item index="hot_video">
-            <i class="el-icon-ext-fire"></i>
-            <span slot="title">{{$t('popular_film')}}</span>
-        </el-menu-item>
         <!--         內容          -->
-        <el-menu-item index="subscribe_content">
+        <el-menu-item index="updated_video_content">
             <i class="el-icon-ext-subscribe"></i>
             <span slot="title">{{$t('content')}}</span>
         </el-menu-item>
@@ -60,23 +55,7 @@
             }
         },
         methods: {
-            asideMenuShow(route_name) {
-                let show = false;
-                switch (route_name) {
-                    case 'recommendVideo':
-                        show = true;
-                        break;
-                    case 'hotVideo':
-                        show = true;
-                        break;
-                    case 'subscribe_content':
-                        show = true;
-                        break;
-                    default:
-                        break;
-                }
-                return show;
-            }
+
         }
     }
 </script>

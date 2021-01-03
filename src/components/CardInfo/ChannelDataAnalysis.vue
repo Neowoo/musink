@@ -1,7 +1,7 @@
 <template>
     <el-card>
         <div>
-            <h2 style="padding-bottom: 14px;">
+            <h2 class="card-header">
                 {{$t('channel_data_analysis')}}
             </h2>
             <div>
@@ -40,7 +40,9 @@
 <script>
     export default {
         data() {
-
+            return {
+                
+            }
         }
     }
 </script>

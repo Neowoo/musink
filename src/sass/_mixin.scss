@@ -1,0 +1,13 @@
+@mixin CfontSize($px: 16px) {
+  font-size: ($px) + px;
+}
+
+@mixin rwd($px) {
+  @media (max-width: ($px) + px){
+    @content
+  }
+}
+
+@mixin padding-b($px) {
+  padding-bottom: ($px) + px;
+}
